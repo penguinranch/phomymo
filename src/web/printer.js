@@ -307,7 +307,7 @@ const M04_CMD = {
   DENSITY: (level) => new Uint8Array([0x1f, 0x11, 0x02, level]),
   // 1F 11 37 <param> - Set heat/speed parameter
   HEAT: (param) => new Uint8Array([0x1f, 0x11, 0x37, param]),
-  // 1F 11 0B - Init command (required, purpose undetermined)
+  // 1F 11 0B - Set media type to continuous (disables gap detection)
   INIT: new Uint8Array([0x1f, 0x11, 0x0b]),
   // 1F 11 35 <mode> - Compression mode (0x00=raw, 0x01=LZO; raw is sufficient)
   COMPRESSION: (mode) => new Uint8Array([0x1f, 0x11, 0x35, mode]),
